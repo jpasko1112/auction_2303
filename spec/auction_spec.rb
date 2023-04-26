@@ -5,6 +5,9 @@ RSpec.describe Auction do
     @auction = Auction.new(@items = [])
     @item1 = Item.new('Chalkware Piggy Bank')
     @item2 = Item.new('Bamboo Picture Frame')
+    @item3 = Item.new('Homemade Chocolate Chip Cookies')
+    @item4 = Item.new('2 Days Dogsitting')
+    @item5 = Item.new('Forever Stamps')
   end
 
   describe '#initialize' do
@@ -32,4 +35,6 @@ RSpec.describe Auction do
       expect(@auction.item_names).to eq(['Chalkware Piggy Bank', 'Bamboo Picture Frame'])
     end
   end
+
+
 end

@@ -2,20 +2,22 @@ require 'spec_helper'
 
 RSpec.describe Attendee do
   before(:each) do
-    @attendee = Attendee.new({name: 'Megan', budget: '$50'})
+    @attendee1 = Attendee.new({name: 'Megan', budget: '$50'})
+    @attendee2 = Attendee.new({name: 'Bob', budget: '$75'})
+    @attendee3 = Attendee.new({name: 'Mike', budget: '$100'})
   end
 
   describe '#initialize' do
     it 'initialize with attributes' do
-      expect(@attendee).to be_a(Attendee)
+      expect(@attendee1).to be_a(Attendee)
     end
 
     it 'has a name' do
-      expect(@attendee.name).to eq('Megan')
+      expect(@attendee1.name).to eq('Megan')
     end
 
     it 'has a budget' do
-      expect(@attendee.budget).to eq('$50')
+      expect(@attendee1.budget).to eq('$50')
     end
   end
 end

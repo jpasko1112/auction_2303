@@ -17,5 +17,23 @@ RSpec.describe Item do
     it 'has a name' do
       expect(@item1.name).to eq('Chalkware Piggy Bank')
     end
+
+    it 'stores bids on an item' do
+      expect(@item1.bids).to eq({})
+    end
+  end
+
+  describe '#add_bid' do
+    it 'allows attendees to bid on items' do
+      @item1.add_bid(@attendee2, 20)
+      @item1.add_bid(@attendee1, 22)
+      expect(@item1.bids).to eq({@attendee2 => 20, @attendee1 => 22})
+    end
+  end
+
+  describe '#current_high_bid' do
+    it 'returns the highest bid on an item' do
+      
+    end
   end
 end
